@@ -1,6 +1,7 @@
 <?php
 $file=fopen("browser_counter.txt","r");
 $num=fgets($file);
+fclose($file);
 $num++;
 $file=fopen("browser_counter.txt","w");
 fwrite($file,$num);
