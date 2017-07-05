@@ -1,6 +1,9 @@
 <?php
 $file=fopen("browser_counter.txt","r");
-fgets($file);
+$num=fgets($file);
+$num++;
+$file=fopen("browser_counter.txt","w");
+fwrite($file,$num);
 fclose($file);
 ?>
 
@@ -13,7 +16,7 @@ fclose($file);
 	<body>
 		網站瀏覽人數：
 		<?php
-			echo "$file";
+			echo "$num";
 		?>
 	</body>
 </html>
